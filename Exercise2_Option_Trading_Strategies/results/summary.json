@@ -1,0 +1,14 @@
+{
+  "Buy and Hold": {
+    "Total Return": "-9.45%",
+    "Sharpe Ratio": "-0.058",
+    "Max Drawdown": "-46.68%",
+    "Final Value": "$90,548"
+  },
+  "RL Strategy": {
+    "Total Return": "2.47%",
+    "Sharpe Ratio": "0.233",
+    "Max Drawdown": "-42.86%",
+    "Final Value": "$102,474"
+  }
+}
