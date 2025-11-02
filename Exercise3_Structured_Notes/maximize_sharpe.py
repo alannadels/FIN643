@@ -1,5 +1,5 @@
 """
-Helper functions for Sharpe ratio calculation and result printing
+Helper functions for Sharpe ratio calculation and results printing
 """
 import numpy as np
 import pandas as pd
