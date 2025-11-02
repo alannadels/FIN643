@@ -1,6 +1,7 @@
 """
-AI Energy Transition Autocallable Structured Note
-60% NVDA / 40% URA basket with autocall, buffer, and kicker features
+AI Energy Transition Buffered Participation Note
+Optimal configuration: 75% NVDA / 25% URA basket
+Maximized for Sharpe ratio with kicker participation and minimal buffer
 """
 import numpy as np
 import pandas as pd
@@ -8,30 +9,35 @@ from typing import Dict, Tuple
 
 class AIEnergyStructuredNote:
     """
-    Buffered Autocallable Structured Note on NVDA/URA basket
+    Buffered Participation Structured Note on NVDA/URA basket
 
-    Features:
-    - 60/40 NVDA/URA basket
-    - Quarterly autocall observations
-    - Downside buffer protection
-    - Step-up conditional coupons
-    - Momentum kicker for enhanced upside
+    Optimal Features (Sharpe: 1.3167):
+    - 75/25 NVDA/URA basket
+    - Quarterly observations with effectively disabled autocall (99% threshold)
+    - 5% downside buffer (minimal protection for max upside)
+    - Minimal coupons (0%, 2%, 4% Years 1-3)
+    - 1.05x momentum kicker from 0-300% (continuous participation enhancement)
+
+    Design Philosophy:
+    - Eliminates early autocall to capture bull market gains
+    - Prioritizes upside participation over downside protection
+    - Young investor focus: growth over income
     """
 
     def __init__(
         self,
         initial_capital: float = 100000,
-        nvda_weight: float = 0.60,
-        ura_weight: float = 0.40,
-        autocall_threshold: float = 0.12,  # 12% above initial
-        autocall_return: float = 0.07,  # 7% annual return on autocall
-        buffer_level: float = 0.25,  # 25% downside buffer
-        coupon_year1: float = 0.05,  # 5% annual
-        coupon_year2: float = 0.07,  # 7% annual
-        coupon_year3: float = 0.09,  # 9% annual
-        kicker_start: float = 0.25,  # Kicker starts at +25%
-        kicker_end: float = 0.60,  # Kicker ends at +60%
-        kicker_multiplier: float = 1.75,  # 1.75x participation in kicker zone
+        nvda_weight: float = 0.75,  # Optimal: 75% NVDA
+        ura_weight: float = 0.25,  # Optimal: 25% URA
+        autocall_threshold: float = 0.99,  # Optimal: Effectively disabled
+        autocall_return: float = 0.20,  # 20% annual if triggered
+        buffer_level: float = 0.05,  # Optimal: 5% minimal buffer
+        coupon_year1: float = 0.00,  # Optimal: 0% Year 1
+        coupon_year2: float = 0.02,  # Optimal: 2% Year 2
+        coupon_year3: float = 0.04,  # Optimal: 4% Year 3
+        kicker_start: float = 0.00,  # Optimal: 0% (starts immediately)
+        kicker_end: float = 3.00,  # Optimal: 300% (wide zone)
+        kicker_multiplier: float = 1.05,  # Optimal: 1.05x continuous enhancement
         maturity_years: float = 3.0
     ):
         self.initial_capital = initial_capital
