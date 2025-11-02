@@ -1,0 +1,14 @@
+{
+  "configuration_name": "Super Aggressive",
+  "sharpe_ratio": 1.3166568214965106,
+  "parameters": {
+    "nvda_weight": 0.75,
+    "autocall_threshold": 0.99,
+    "buffer_level": 0.05,
+    "autocall_return": 0.2,
+    "coupon_year1": 0.0,
+    "kicker_start": 0.0,
+    "kicker_end": 3.0,
+    "kicker_multiplier": 1.05
+  }
+}

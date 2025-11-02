@@ -1,0 +1,71 @@
+================================================================================
+AI and ENERGY TRANSITION STRUCTURED NOTE - FINAL RESULTS SUMMARY
+================================================================================
+Student: Alan Nadelsticher (axn596@miami.edu)
+Date: November 2, 2025
+Assignment: Exercise 3 - Structured Notes
+
+================================================================================
+OPTIMAL STRUCTURED NOTE CONFIGURATION
+================================================================================
+
+Basket Composition:
+  - NVIDIA (NVDA): 75%
+  - Global X Uranium ETF (URA): 25%
+  - Historical Correlation: 0.440
+
+Note Structure:
+  - Maturity: 3 years
+  - Autocall Threshold: 99% (effectively disabled)
+  - Autocall Return: 20% annual (if triggered)
+  - Downside Buffer: 5%
+  - Kicker Zone: 0% to 300%
+  - Kicker Multiplier: 1.05x
+  - Coupon Structure: 0% (Year 1), 2% (Year 2), 4% (Year 3)
+
+================================================================================
+PERFORMANCE METRICS (Backtest: 6 Rolling 3-Year Periods, 2020-2025)
+================================================================================
+
+*** PRIMARY OBJECTIVE ***
+Sharpe Ratio: 1.3167
+
+Risk-Adjusted Returns:
+  - Mean Annualized Return: 9.43%
+  - Annual Standard Deviation: 4.12%
+  - Risk-Free Rate Used: 4.00%
+  - Sharpe Calculation: (9.43% - 4.00%) / 4.12% = 1.3167
+
+Total Returns (3-Year Periods):
+  - Mean 3-Year Return: 31.50%
+  - Median 3-Year Return: 23.25%
+  - Best 3-Year Return: 53.50%
+  - Worst 3-Year Return: 20.50%
+  - Standard Deviation: 12.36%
+
+Structure Performance:
+  - Autocall Rate: 100.0%
+  - Average Holding Period: 378 days (1.50 years)
+  - Average Coupons Received: $1,500
+  - Average Basket Return at Exit: 125.36%
+
+================================================================================
+UNDERLYING BASKET HISTORICAL PERFORMANCE (2020-2025)
+================================================================================
+
+NVIDIA (NVDA):
+  - Annualized Return: 74.88%
+  - Annualized Volatility: 53.57%
+  - Price Range: $4.89 - $207.04
+
+Global X Uranium ETF (URA):
+  - Annualized Return: 39.07%
+  - Annualized Volatility: 41.24%
+  - Price Range: $5.97 - $58.11
+
+Basket Correlation:
+  - NVDA-URA Correlation: 0.440 (moderate diversification)
+
+================================================================================
+END OF RESULTS SUMMARY
+================================================================================
