@@ -14,7 +14,7 @@ Exit Signals:
 4. Volatility Regime: Realized vol exceeds 75th percentile (high volatility environment)
 5. Drawdown Control: Exit if position drawdown exceeds 5%
 
-Author: [Your Name]
+Author: [Alan Nadelsticher]
 Date: November 2025
 """
 
