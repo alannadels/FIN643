@@ -1,0 +1,42 @@
+======================================================================
+TLT CARRY STRATEGY WITH MULTI-SIGNAL RISK MANAGEMENT
+======================================================================
+
+Fetching data from 2015-11-12 to 2025-11-09...
+Data fetched: 2512 observations from 2015-11-12 to 2025-11-07
+
+Generating trading signals...
+Running backtest with drawdown control...
+Calculating performance metrics...
+
+======================================================================
+PERFORMANCE SUMMARY: TLT CARRY STRATEGY WITH RISK MANAGEMENT
+======================================================================
+
+--- STRATEGY PERFORMANCE ---
+Total Return.................. 27.07%
+CAGR.......................... 2.73%
+Annual Return................. 2.93%
+Annual Volatility............. 6.87%
+Sharpe Ratio.................. 0.4264
+Max Drawdown.................. -13.40%
+Final Value................... $1,270,731.36
+
+--- BENCHMARK PERFORMANCE (Buy & Hold TLT) ---
+Total Return.................. -2.95%
+CAGR.......................... -0.34%
+Annual Return................. 0.83%
+Annual Volatility............. 15.26%
+Sharpe Ratio.................. 0.0542
+Max Drawdown.................. -48.35%
+Final Value................... $970,521.09
+
+--- TRADING STATISTICS ---
+Number of Trades.............. 63
+Days in Market................ 628
+% Time in Market.............. 28.02%
+
+======================================================================
+*** KEY METRIC: SHARPE RATIO STRATEGY = 0.4264 ***
+*** KEY METRIC: SHARPE RATIO BUY & HOLD TLT = 0.0542 ***
+======================================================================
