@@ -71,7 +71,7 @@ elif isinstance(usdjpy.columns, pd.MultiIndex):
 else:
     usdjpy['Rate'] = usdjpy.iloc[:, 0]
 
-print(f"  ✓ USD/JPY: {len(usdjpy)} records")
+print(f"  [OK] USD/JPY: {len(usdjpy)} records")
 
 # Download stocks
 stocks = {}
@@ -90,7 +90,7 @@ for ticker in ALLOCATION.keys():
                 stocks[ticker] = stock_data['Close']
         except:
             stocks[ticker] = stock_data.iloc[:, 3]
-    print(f"  ✓ {ticker}: {len(stock_data)} records")
+    print(f"  [OK] {ticker}: {len(stock_data)} records")
 
 stock_prices = pd.DataFrame(stocks)
 
@@ -103,7 +103,7 @@ if not vix.empty:
         vix['Volatility'] = vix['Close'].iloc[:, 0]
     else:
         vix['Volatility'] = vix.iloc[:, 0]
-    print(f"  ✓ VIX: {len(vix)} records")
+    print(f"  [OK] VIX: {len(vix)} records")
 else:
     vix = pd.DataFrame(index=usdjpy.index)
     vix['Volatility'] = usdjpy['Rate'].pct_change().rolling(20).std() * 100
@@ -124,7 +124,7 @@ data['VIX'] = vix['Volatility']
 # Forward fill and drop NaN
 data = data.ffill().dropna()
 
-print(f"  ✓ Combined dataset: {len(data)} trading days")
+print(f"  [OK] Combined dataset: {len(data)} trading days")
 
 # ============================================================================
 # STEP 3: Calculate Returns
@@ -290,7 +290,7 @@ plt.suptitle('Yen Carry Trade - VIX Spike (20) Strategy Performance',
 
 plt.savefig('/Users/alannadels/Desktop/Finance/exercise5_Currency_Markets/yen_carry_trade_analysis.png',
             dpi=300, bbox_inches='tight')
-print("  ✓ Chart saved: yen_carry_trade_analysis.png")
+print("  [OK] Chart saved: yen_carry_trade_analysis.png")
 
 # ============================================================================
 # STEP 7: Save Results
@@ -400,7 +400,7 @@ with open('/Users/alannadels/Desktop/Finance/exercise5_Currency_Markets/yen_carr
     f.write(f"the strategy avoided major losses while capturing {total_return*100:.1f}% total returns.\n")
     f.write("=" * 80 + "\n")
 
-print("  ✓ Metrics saved: yen_carry_trade_metrics.txt")
+print("  [OK] Metrics saved: yen_carry_trade_metrics.txt")
 
 # Save detailed daily data
 daily_data = pd.DataFrame({
@@ -418,18 +418,18 @@ daily_data = pd.DataFrame({
 
 daily_data.to_csv('/Users/alannadels/Desktop/Finance/exercise5_Currency_Markets/yen_carry_trade_daily_data.csv',
                   index=False)
-print("  ✓ Daily data saved: yen_carry_trade_daily_data.csv")
+print("  [OK] Daily data saved: yen_carry_trade_daily_data.csv")
 
 print("\n" + "=" * 80)
-print("✅ ANALYSIS COMPLETE!")
+print("ANALYSIS COMPLETE!")
 print("=" * 80)
 print("\nFiles generated:")
 print("  1. yen_carry_trade.py - This script")
 print("  2. yen_carry_trade_analysis.png - Comprehensive charts")
 print("  3. yen_carry_trade_metrics.txt - Detailed performance metrics")
 print("  4. yen_carry_trade_daily_data.csv - Daily returns and positions")
-print("\n🏆 VIX Spike (20) Strategy")
-print(f"📈 Sharpe Ratio: {sharpe_ratio:.3f}")
-print(f"💰 Total Return: {total_return*100:.2f}%")
-print(f"📉 Max Drawdown: {max_drawdown*100:.2f}%")
+print("\nVIX Spike (20) Strategy Results:")
+print(f"  Sharpe Ratio: {sharpe_ratio:.3f}")
+print(f"  Total Return: {total_return*100:.2f}%")
+print(f"  Max Drawdown: {max_drawdown*100:.2f}%")
 print("=" * 80)
