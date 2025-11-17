@@ -1,0 +1,93 @@
+================================================================================
+YEN CARRY TRADE - VIX SPIKE (20) STRATEGY
+PERFORMANCE METRICS
+================================================================================
+
+STRATEGY DESCRIPTION:
+--------------------------------------------------------------------------------
+Borrow JPY at low interest rates (~0.1% p.a.)
+Convert to USD and invest in tech stocks:
+  - 50% GOOGL (Alphabet)
+  - 30% NVDA (Nvidia)
+  - 20% IBM
+Exit when VIX > 20 (high volatility environment)
+Re-enter when VIX < 20 (low volatility environment)
+
+TIME PERIOD:
+--------------------------------------------------------------------------------
+Start Date:              2020-01-02
+End Date:                2024-12-30
+Total Trading Days:      1257
+Days In Position:        652 (51.9%)
+Days Out of Position:    605 (48.1%)
+
+RETURNS:
+--------------------------------------------------------------------------------
+Total Return:            1238.32%
+Annualized Return:       68.21%
+Buy & Hold Return:       891.70%
+Outperformance:          34.95%
+
+RISK METRICS:
+--------------------------------------------------------------------------------
+Annualized Volatility:   17.70%
+Maximum Drawdown:        -16.10%
+Sharpe Ratio:            3.855
+Calmar Ratio:            4.237
+Win Rate:                31.34%
+
+PORTFOLIO STATISTICS:
+--------------------------------------------------------------------------------
+GOOGL Total Return:      180.46% (weight: 50%)
+NVDA Total Return:      2201.97% (weight: 30%)
+IBM Total Return:      114.67% (weight: 20%)
+
+USD/JPY Change:          45.22%
+USD/JPY Start:           108.71
+USD/JPY End:             157.87
+USD/JPY Peak:            161.61
+USD/JPY Trough:          102.68
+
+WHY THIS STRATEGY WORKS:
+--------------------------------------------------------------------------------
+1. VIX spikes signal risk-off environments where:
+   - Equity markets typically sell off
+   - JPY tends to appreciate (safe haven)
+   - Carry trades become unprofitable
+
+2. Exiting when VIX > 20 protects against:
+   - Market crashes (COVID-19, Aug 2024 unwind)
+   - Currency reversals
+   - Volatility spikes
+
+3. Re-entering when VIX < 20 captures:
+   - Bull market gains (2020-2021, 2023-2024)
+   - Tech rally (AI boom)
+   - JPY weakness periods
+
+KEY EVENTS AVOIDED:
+--------------------------------------------------------------------------------
+- COVID-19 crash (early 2020)
+- Various volatility spikes throughout 2020-2024
+- August 2024 carry trade unwind
+- Total periods out of market: 605 days
+
+COMPARISON TO BUY & HOLD:
+--------------------------------------------------------------------------------
+Buy & Hold Total Return:     891.70%
+Buy & Hold Sharpe Ratio:     1.699
+Buy & Hold Max Drawdown:     -34.70%
+
+Strategy Advantage:
+  Higher Sharpe:             +126.9%
+  Lower Drawdown:            -53.6%
+  Higher Total Return:       +38.9%
+
+================================================================================
+CONCLUSION:
+================================================================================
+The VIX Spike (20) strategy achieved a Sharpe ratio of 3.85,
+significantly outperforming buy-and-hold while reducing drawdowns.
+By staying out of the market during high-volatility periods (48.1% of time),
+the strategy avoided major losses while capturing 1238.3% total returns.
+================================================================================
