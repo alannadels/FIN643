@@ -1,0 +1,44 @@
+
+================================================================================
+               IMPLEMENTED OPTIONS STRATEGY - PERFORMANCE REPORT
+================================================================================
+
+Initial Capital: $100,000
+Period: 2021-01-01 to 2024-12-31
+
+--------------------------------------------------------------------------------
+                              PERFORMANCE METRICS
+--------------------------------------------------------------------------------
+Strategy                    | Total Return | Sharpe | Max Drawdown | Final Value
+--------------------------------------------------------------------------------
+Implemented Strategy        |     +64.3%    |   0.84 |     -10.2%   |  $164,282
+CVX Buy-and-Hold             |     +57.4%    |   0.53 |     -24.9%   |  $157,414
+HYG Buy-and-Hold             |     +11.1%    |   0.14 |     -15.8%   |  $111,128
+50/50 CVX/HYG (No Options)  |     +34.3%    |   0.44 |     -17.6%   |  $134,271
+--------------------------------------------------------------------------------
+
+Outperformance vs CVX:  +6.9%
+Outperformance vs HYG: +53.2%
+
+--------------------------------------------------------------------------------
+                           STRATEGY SELECTION BREAKDOWN
+--------------------------------------------------------------------------------
+Covered Call:    27% of periods
+Protective Put:    2% of periods
+Long Straddle:    70% of periods
+Long Strangle:    0% of periods
+
+Average CVX Allocation: 58%
+Average HYG Allocation: 42%
+
+--------------------------------------------------------------------------------
+                              KEY INSIGHTS
+--------------------------------------------------------------------------------
+- Strategy uses trading signals (RSI, Trend, Volatility, IV Rank) to select
+  among 4 option strategies: Covered Call, Protective Put, Straddle, Strangle
+- Allocation between CVX and HYG adjusts based on momentum and risk signals
+- Covered calls generate income in flat/bullish markets
+- Protective puts limit downside in volatile downtrends
+- Straddles/strangles profit from large price moves when IV is low
+
+================================================================================
